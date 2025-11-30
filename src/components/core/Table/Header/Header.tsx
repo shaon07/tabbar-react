@@ -1,3 +1,4 @@
+import { useCallback, useState } from "react";
 import { MIN_VENUE_WIDTH } from "../../../../constants";
 import type { Menu } from "../../../../types";
 
@@ -7,15 +8,24 @@ interface HeaderProps {
 }
 
 export default function Header({ options, onClick = () => {} }: HeaderProps) {
-  const handleClickItems = (option: Menu) => {
-    onClick(option);
-  };
+  const [active, setActive] = useState<string>("2024-12-01");
+
+  const handleClickItems = useCallback(
+    (option: Menu) => {
+      setActive(option.value);
+      onClick(option);
+    },
+    [onClick]
+  );
+
   return (
     <div className="w-full overflow-x-scroll flex items-center">
       {options.map((option) => (
         <div
           key={option.value}
-          className="bg-gray-200 flex-1 p-3 text-center text-xs cursor-pointer hover:bg-gray-300 flex-col items-center justify-center min-w-[120px] border-r border-gray-400 last:border-0"
+          className={` flex-1 p-3 text-center text-xs cursor-pointer hover:bg-gray-400 flex-col items-center justify-center min-w-[120px] border-r border-gray-400 last:border-0 ${
+            active === option.value ? "bg-gray-400" : "bg-gray-200"
+          }`}
           style={{
             width: MIN_VENUE_WIDTH,
           }}

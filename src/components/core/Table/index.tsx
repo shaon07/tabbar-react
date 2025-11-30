@@ -1,42 +1,28 @@
+import { useState } from "react";
 import {
+  EVENT_OPTIONS,
   HEADER_OPTIONS,
   TIME_OPTIONS,
   VENUE_OPTIONS,
 } from "../../../constants";
+import type { Event } from "../../../types";
 import EventList from "./EventList";
 import Header from "./Header/Header";
 import TimeLists from "./TimeList";
 import Vanues from "./Venues";
 
-const eventOptions = [
-  {
-    name: "Event 1",
-    startTime: "9:00",
-    endTime: "9:30",
-    venue: ["venue-1"],
-  },
-  {
-    name: "Event 2",
-    startTime: "10:00",
-    endTime: "10:30",
-    venue: ["venue-1", "venue-2"],
-  },
-  {
-    name: "Event 3",
-    startTime: "9:45",
-    endTime: "10:45",
-    venue: ["venue-3"],
-  },
-];
-
 export default function Table() {
+  const [eventOptions, setEventOptions] = useState<Event[]>(
+    EVENT_OPTIONS["2024-12-01"]
+  );
+
   return (
     <div className="bg-gray-200 max-w-[600px]">
       <div className="">
         <Header
           options={HEADER_OPTIONS}
           onClick={(data) => {
-            console.log(data);
+            setEventOptions(EVENT_OPTIONS[data.value]);
           }}
         />
       </div>

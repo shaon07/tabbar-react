@@ -1,4 +1,4 @@
-import type { Menu } from "../types";
+import type { Event, Menu } from "../types";
 
 export const MIN_VENUE_WIDTH = 150;
 export const HEADER_MAX_WIDTH = 600;
@@ -32,26 +32,6 @@ export const VENUE_OPTIONS: Menu[] = [
     label: "Venue 4",
     value: "venue-4",
   },
-  {
-    label: "Venue 5",
-    value: "venue-5",
-  },
-  {
-    label: "Venue 6",
-    value: "venue-6",
-  },
-  {
-    label: "Venue 7",
-    value: "venue-7",
-  },
-  {
-    label: "Venue 8",
-    value: "venue-8",
-  },
-  {
-    label: "Venue 9",
-    value: "venue-9",
-  },
 ];
 
 export const HEADER_OPTIONS: Menu[] = [
@@ -84,3 +64,146 @@ export const HEADER_OPTIONS: Menu[] = [
     value: "2024-12-07",
   },
 ];
+
+export const EVENT_OPTIONS: Record<string, Event[]> = {
+  "2024-12-01": [
+    {
+      name: "Event 1",
+      startTime: "9:00",
+      endTime: "9:30",
+      venue: ["venue-1"],
+    },
+    {
+      name: "Event 2",
+      startTime: "10:00",
+      endTime: "10:30",
+      venue: ["venue-1", "venue-2"],
+    },
+    {
+      name: "Event 3",
+      startTime: "9:45",
+      endTime: "10:45",
+      venue: ["venue-3"],
+    },
+  ],
+
+  "2024-12-02": [
+    {
+      name: "Event 1",
+      startTime: "9:15",
+      endTime: "9:45",
+      venue: ["venue-1", "venue-3"],
+    },
+    {
+      name: "Event 2",
+      startTime: "10:00",
+      endTime: "10:30",
+      venue: ["venue-1"],
+    },
+    {
+      name: "Event 3",
+      startTime: "9:00",
+      endTime: "10:00",
+      venue: ["venue-3"],
+    },
+  ],
+
+  "2024-12-03": [
+    {
+      name: "Event 1",
+      startTime: "9:45",
+      endTime: "10:15",
+      venue: ["venue-2"],
+    },
+    {
+      name: "Event 2",
+      startTime: "10:30",
+      endTime: "10:45",
+      venue: ["venue-1", "venue-2"],
+    },
+  ],
+
+  "2024-12-04": [
+    {
+      name: "Event 1",
+      startTime: "9:00",
+      endTime: "9:30",
+      venue: ["venue-1"],
+    },
+    {
+      name: "Event 2",
+      startTime: "10:00",
+      endTime: "10:30",
+      venue: ["venue-1", "venue-2"],
+    },
+    {
+      name: "Event 3",
+      startTime: "9:00",
+      endTime: "10:45",
+      venue: ["venue-4"],
+    },
+  ],
+
+  "2024-12-05": [
+    {
+      name: "Event 1",
+      startTime: "9:00",
+      endTime: "9:30",
+      venue: ["venue-1"],
+    },
+    {
+      name: "Event 2",
+      startTime: "10:00",
+      endTime: "10:30",
+      venue: ["venue-1", "venue-2"],
+    },
+    {
+      name: "Event 3",
+      startTime: "9:45",
+      endTime: "10:45",
+      venue: ["venue-3"],
+    },
+  ],
+
+  "2024-12-06": [
+    {
+      name: "Event 1",
+      startTime: "9:00",
+      endTime: "9:30",
+      venue: ["venue-1"],
+    },
+    {
+      name: "Event 2",
+      startTime: "10:00",
+      endTime: "10:30",
+      venue: ["venue-1", "venue-2"],
+    },
+    {
+      name: "Event 3",
+      startTime: "9:45",
+      endTime: "10:45",
+      venue: ["venue-3"],
+    },
+  ],
+
+  "2024-12-07": [
+    {
+      name: "Event 1",
+      startTime: "9:00",
+      endTime: "9:30",
+      venue: ["venue-1"],
+    },
+    {
+      name: "Event 2",
+      startTime: "10:00",
+      endTime: "10:30",
+      venue: ["venue-1", "venue-2"],
+    },
+    {
+      name: "Event 3",
+      startTime: "9:45",
+      endTime: "10:45",
+      venue: ["venue-3"],
+    },
+  ],
+};
