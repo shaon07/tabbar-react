@@ -1,3 +1,5 @@
+import { MIN_VENUE_WIDTH } from "../../../../constants";
+
 const headerOptions = [
   {
     label: "Monday",
@@ -31,11 +33,14 @@ const headerOptions = [
 
 export default function Header() {
   return (
-    <div className="w-full max-w-[600px] overflow-x-scroll flex items-center">
+    <div className="w-full overflow-x-scroll flex items-center">
       {headerOptions.map((option) => (
         <div
           key={option.value}
-          className="bg-gray-400 flex-1 p-3 text-center text-xs cursor-pointer hover:bg-gray-500 flex-col items-center justify-center min-w-[120px] border-r border-gray-300 last:border-0"
+          className="bg-gray-200 flex-1 p-3 text-center text-xs cursor-pointer hover:bg-gray-300 flex-col items-center justify-center min-w-[120px] border-r border-gray-400 last:border-0"
+          style={{
+            width: MIN_VENUE_WIDTH,
+          }}
         >
           <p>{option.label}</p>
           <p>{option.value}</p>
