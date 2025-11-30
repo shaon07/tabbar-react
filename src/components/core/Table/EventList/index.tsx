@@ -2,7 +2,12 @@ import { MIN_VENUE_WIDTH, TIME_LIST_HEIGHT } from "../../../../constants";
 
 export default function EventList() {
   return (
-    <div className="relative inset-0 w-full h-full">
+    <div
+      className="relative inset-0 w-full"
+      style={{
+        height: TIME_LIST_HEIGHT * 8,
+      }}
+    >
       <div
         className="bg-green-200 border border-gray-400 flex items-center justify-center cursor-pointer hover:bg-green-300 absolute"
         style={{
