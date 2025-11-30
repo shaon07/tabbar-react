@@ -29,16 +29,18 @@ export default function Table() {
         />
       </div>
 
-      <div className="grid grid-cols-[100px_500px]">
-        <div>
+      <div className="grid grid-cols-[100px_1fr] h-full overflow-scroll max-h-[400px]">
+        <div className="sticky left-0 z-20">
           <div className="h-[39px]"></div>
           <TimeLists options={TIME_OPTIONS} />
         </div>
 
-        <div className="bg-blue-300 relative w-full h-full overflow-scroll">
+        <div className="bg-blue-300 relative w-full ">
           <Vanues options={VENUE_OPTIONS} />
 
-          <EventList option={eventOptions} />
+          <div className="flex">
+            <EventList option={eventOptions} />
+          </div>
         </div>
       </div>
     </div>

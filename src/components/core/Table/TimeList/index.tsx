@@ -6,7 +6,7 @@ interface TimeListProps {
 
 export default function TimeLists({ options }: TimeListProps) {
   return (
-    <div className="bg-yellow-300 max-h-[400px] overflow-y-scroll">
+    <div className="bg-yellow-300 ">
       {options.map((time) => (
         <div
           key={time}
