@@ -12,12 +12,7 @@ interface EventListProps {
 
 export default function EventList({ option }: EventListProps) {
   return (
-    <div
-      className="relative inset-0 w-full"
-      // style={{
-      //   height: TIME_LIST_HEIGHT * Math.min(TIME_OPTIONS.length, 8),
-      // }}
-    >
+    <div className="relative inset-0 w-full">
       {option.map((event, index) => {
         const startIndex = TIME_OPTIONS.indexOf(event.startTime);
         const endIndex = TIME_OPTIONS.indexOf(event.endTime) + 1;
