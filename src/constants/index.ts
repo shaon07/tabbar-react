@@ -14,6 +14,20 @@ export const TIME_OPTIONS: string[] = [
   "10:30",
   "10:45",
   "11:00",
+  "11:15",
+  "11:30",
+  "11:45",
+  "12:00",
+  "12:15",
+  "12:30",
+  "12:45",
+  "13:00",
+  "13:15",
+  "13:30",
+  "13:45",
+  "14:00",
+  "14:15",
+  "14:30",
 ];
 
 export const VENUE_OPTIONS: Menu[] = [
@@ -32,6 +46,38 @@ export const VENUE_OPTIONS: Menu[] = [
   {
     label: "Venue 4",
     value: "venue-4",
+  },
+  {
+    label: "Venue 5",
+    value: "venue-5",
+  },
+  {
+    label: "Venue 6",
+    value: "venue-6",
+  },
+  {
+    label: "Venue 7",
+    value: "venue-7",
+  },
+  {
+    label: "Venue 8",
+    value: "venue-8",
+  },
+  {
+    label: "Venue 9",
+    value: "venue-9",
+  },
+  {
+    label: "Venue 10",
+    value: "venue-10",
+  },
+  {
+    label: "Venue 11",
+    value: "venue-11",
+  },
+  {
+    label: "Venue 12",
+    value: "venue-12",
   },
 ];
 

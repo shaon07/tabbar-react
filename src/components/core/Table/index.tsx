@@ -18,7 +18,7 @@ export default function Table() {
   );
 
   return (
-    <div className="bg-gray-200 max-w-[600px]">
+    <div className="bg-gray-200 w-dvw h-dvh">
       <div>
         <Header
           active={selectedHeader}
@@ -29,7 +29,7 @@ export default function Table() {
         />
       </div>
 
-      <div className="grid grid-cols-[100px_1fr] h-full overflow-scroll max-h-[400px]">
+      <div className="grid grid-cols-[100px_1fr] overflow-scroll h-[calc(100dvh-55px)]">
         <div className="sticky left-0 z-20">
           <div className="h-[39px]"></div>
           <TimeLists options={TIME_OPTIONS} />
