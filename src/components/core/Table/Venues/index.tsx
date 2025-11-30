@@ -7,7 +7,7 @@ interface VenuesProps {
 
 export default function Vanues({ options }: VenuesProps) {
   return (
-    <div className="w-full flex items-center">
+    <div className="w-full flex items-center sticky top-0 z-30">
       {options.map((option) => (
         <div
           key={option.value}
