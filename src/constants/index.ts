@@ -13,6 +13,7 @@ export const TIME_OPTIONS: string[] = [
   "10:15",
   "10:30",
   "10:45",
+  "11:00",
 ];
 
 export const VENUE_OPTIONS: Menu[] = [
@@ -82,7 +83,7 @@ export const EVENT_OPTIONS: Record<string, Event[]> = {
     {
       name: "Event 3",
       startTime: "9:45",
-      endTime: "10:45",
+      endTime: "11:00",
       venue: ["venue-3"],
     },
   ],

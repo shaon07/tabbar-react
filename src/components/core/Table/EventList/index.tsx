@@ -15,7 +15,7 @@ export default function EventList({ option }: EventListProps) {
     <div
       className="relative inset-0 w-full"
       style={{
-        height: TIME_LIST_HEIGHT * TIME_OPTIONS.length,
+        height: TIME_LIST_HEIGHT * Math.min(TIME_OPTIONS.length, 8),
       }}
     >
       {option.map((event, index) => {
