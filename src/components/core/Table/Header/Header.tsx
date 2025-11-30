@@ -1,19 +1,22 @@
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { MIN_VENUE_WIDTH } from "../../../../constants";
 import type { Menu } from "../../../../types";
 
 interface HeaderProps {
+  active: string;
   options: Menu[];
   onClick?: (value: Menu) => void;
 }
 
-export default function Header({ options, onClick = () => {} }: HeaderProps) {
-  const [active, setActive] = useState<string>("2024-12-01");
-
+export default function Header({
+  active,
+  options,
+  onClick = () => {},
+}: HeaderProps) {
   const handleClickItems = useCallback(
     (option: Menu) => {
-      setActive(option.value);
       onClick(option);
+      localStorage.setItem("selectedHeader", option.value);
     },
     [onClick]
   );

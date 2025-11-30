@@ -12,14 +12,16 @@ import TimeLists from "./TimeList";
 import Vanues from "./Venues";
 
 export default function Table() {
+  const selectedHeader = localStorage.getItem("selectedHeader") || "2024-12-01";
   const [eventOptions, setEventOptions] = useState<Event[]>(
-    EVENT_OPTIONS["2024-12-01"]
+    EVENT_OPTIONS[selectedHeader] || []
   );
 
   return (
     <div className="bg-gray-200 max-w-[600px]">
-      <div className="">
+      <div>
         <Header
+          active={selectedHeader}
           options={HEADER_OPTIONS}
           onClick={(data) => {
             setEventOptions(EVENT_OPTIONS[data.value]);
