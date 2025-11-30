@@ -1,8 +1,10 @@
+import type { Menu } from "../types";
+
 export const MIN_VENUE_WIDTH = 150;
 export const HEADER_MAX_WIDTH = 600;
 export const TIME_LIST_HEIGHT = 50;
 
-export const TIME_OPTIONS = [
+export const TIME_OPTIONS: string[] = [
   "9:00",
   "9:15",
   "9:30",
@@ -13,7 +15,7 @@ export const TIME_OPTIONS = [
   "10:45",
 ];
 
-export const VENUE_OPTIONS = [
+export const VENUE_OPTIONS: Menu[] = [
   {
     label: "Venue 1",
     value: "venue-1",
@@ -49,5 +51,36 @@ export const VENUE_OPTIONS = [
   {
     label: "Venue 9",
     value: "venue-9",
+  },
+];
+
+export const HEADER_OPTIONS: Menu[] = [
+  {
+    label: "Monday",
+    value: "2024-12-01",
+  },
+  {
+    label: "Tuesday",
+    value: "2024-12-02",
+  },
+  {
+    label: "Wednesday",
+    value: "2024-12-03",
+  },
+  {
+    label: "Thursday",
+    value: "2024-12-04",
+  },
+  {
+    label: "Friday",
+    value: "2024-12-05",
+  },
+  {
+    label: "Saturday",
+    value: "2024-12-06",
+  },
+  {
+    label: "Sunday",
+    value: "2024-12-07",
   },
 ];

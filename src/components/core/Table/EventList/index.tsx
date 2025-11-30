@@ -4,29 +4,13 @@ import {
   TIME_OPTIONS,
   VENUE_OPTIONS,
 } from "../../../../constants";
+import type { Event } from "../../../../types";
 
-const eventOptions = [
-  {
-    name: "Event 1",
-    startTime: "9:00",
-    endTime: "9:30",
-    venue: ["venue-1"],
-  },
-  {
-    name: "Event 2",
-    startTime: "10:00",
-    endTime: "10:30",
-    venue: ["venue-1", "venue-2"],
-  },
-  {
-    name: "Event 3",
-    startTime: "9:45",
-    endTime: "10:45",
-    venue: ["venue-3"],
-  },
-];
+interface EventListProps {
+  option: Event[];
+}
 
-export default function EventList() {
+export default function EventList({ option }: EventListProps) {
   return (
     <div
       className="relative inset-0 w-full"
@@ -34,7 +18,7 @@ export default function EventList() {
         height: TIME_LIST_HEIGHT * TIME_OPTIONS.length,
       }}
     >
-      {eventOptions.map((event, index) => {
+      {option.map((event, index) => {
         const startIndex = TIME_OPTIONS.indexOf(event.startTime);
         const endIndex = TIME_OPTIONS.indexOf(event.endTime) + 1;
         const topPosition = startIndex * TIME_LIST_HEIGHT;
@@ -47,7 +31,7 @@ export default function EventList() {
         return (
           <div
             key={index}
-            className="bg-green-200 border border-gray-400 flex items-center justify-center cursor-pointer hover:bg-green-300 absolute"
+            className="bg-green-200 border border-gray-400 cursor-pointer hover:bg-green-300 absolute flex flex-col items-center justify-center p-1 text-xs"
             style={{
               width: eventWidth,
               height: eventHeight,
@@ -55,7 +39,10 @@ export default function EventList() {
               left: leftPosition,
             }}
           >
-            {event.name}
+            <span>{event.name}</span>
+            <span>
+              {event.startTime} - {event.endTime}
+            </span>
           </div>
         );
       })}

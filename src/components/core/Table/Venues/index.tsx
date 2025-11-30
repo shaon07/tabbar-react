@@ -1,9 +1,14 @@
-import { MIN_VENUE_WIDTH, VENUE_OPTIONS } from "../../../../constants";
+import { MIN_VENUE_WIDTH } from "../../../../constants";
+import type { Menu } from "../../../../types";
 
-export default function Vanues() {
+interface VenuesProps {
+  options: Menu[];
+}
+
+export default function Vanues({ options }: VenuesProps) {
   return (
     <div className="w-full flex items-center">
-      {VENUE_OPTIONS.map((option) => (
+      {options.map((option) => (
         <div
           key={option.value}
           className="bg-gray-300 p-3 text-center text-xs cursor-pointer hover:bg-gray-400 flex-col items-center justify-center border-x border-gray-400 last:border-0"
